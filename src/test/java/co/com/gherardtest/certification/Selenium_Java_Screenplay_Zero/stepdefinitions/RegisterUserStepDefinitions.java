@@ -1,6 +1,8 @@
 package co.com.gherardtest.certification.Selenium_Java_Screenplay_Zero.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+
+import co.com.gherardtest.certification.Selenium_Java_Screenplay_Zero.tasks.RegisterUserUTest;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -30,7 +32,7 @@ public class RegisterUserStepDefinitions {
 
     @When("^user create an account filling all fields$")
     public void userCreateAnAccountFillingAllFields() {
-
+        theActorInTheSpotlight().attemptsTo(RegisterUserUTest.makeInformation());
     }
 
     @Then("^user sees its username$")

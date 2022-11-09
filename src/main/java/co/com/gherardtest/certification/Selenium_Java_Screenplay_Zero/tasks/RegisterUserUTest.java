@@ -1,8 +1,6 @@
 package co.com.gherardtest.certification.Selenium_Java_Screenplay_Zero.tasks;
 
-import co.com.gherardtest.certification.Selenium_Java_Screenplay_Zero.userInterfaces.Address;
-import co.com.gherardtest.certification.Selenium_Java_Screenplay_Zero.userInterfaces.Home;
-import co.com.gherardtest.certification.Selenium_Java_Screenplay_Zero.userInterfaces.Personal;
+import co.com.gherardtest.certification.Selenium_Java_Screenplay_Zero.userInterfaces.*;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -25,14 +23,25 @@ public class RegisterUserUTest implements Task {
                 SendKeys.of("1993").into(Personal.CBX_YEAR),
                 Click.on(Personal.BTN_NEXT),
 
-                SendKeys.of("Lima").into(Address.TXT_CITY),
-                SendKeys.of("15112").into(Address.TXT_ZIP),
-                SendKeys.of("Peru").into(Address.CBX_COUNTRY),
-                Click.on(Address.BTN_NEXT),
+                Click.on(Location.BTN_NEXT_ADDRESS),
 
+                Click.on(Devices.CBX_OS),
+                Click.on(Devices.WINDOWS),
+                Click.on(Devices.CBX_VERSION),
+                Click.on(Devices.WINDOWS_XP),
+                Click.on(Devices.CBX_LANGUAGE),
+                Click.on(Devices.ENGLISH),
+                Click.on(Devices.BTN_NEXT_DEVICES),
+
+                SendKeys.of("Gherard100*").into(Complete.TXT_PASSWORD),
+                SendKeys.of("Gherard100*").into(Complete.TXT_CONFIRM_PASSWORD),
+                Click.on(Complete.CHK_STAY_INFORMED),
+                Click.on(Complete.CHK_TERMS_USE),
+                Click.on(Complete.CHK_SECURITY_POLICY),
+                Click.on(Complete.BTN_COMPLETE)
         );
     }
-    public static RegisterUserUTest maeInformation(){
+    public static RegisterUserUTest makeInformation(){
         return instrumented(RegisterUserUTest.class);
     }
 }

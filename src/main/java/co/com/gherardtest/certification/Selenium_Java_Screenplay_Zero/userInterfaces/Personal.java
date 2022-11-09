@@ -3,11 +3,12 @@ package co.com.gherardtest.certification.Selenium_Java_Screenplay_Zero.userInter
 import net.serenitybdd.screenplay.targets.Target;
 
 public class Personal {
+
     public static final Target TXT_FIRST_NAME = Target.the("first name").
             locatedBy("//input[@id=\"firstName\"]");
 
     public static final Target TXT_LAST_NAME = Target.the("last name").
-            locatedBy("//input[@id=\"lastname\"]");
+            locatedBy("//input[@id=\"lastName\"]");
 
     public static final Target TXT_EMAIL = Target.the("email").
             locatedBy("//input[@id=\"email\"]");
