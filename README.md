@@ -19,10 +19,11 @@ TEST
 COMMANDS 
 ---------
 - Ctrl + F : Para que muestre la caja de "find by string, selector, or XPath en el navegador después del F11"
+
 - //{etiqueta}[@locator="{locator}"] 
--- //a[@class="{class}"]
--- //input[@id="{id}"]
--- //select[@id="{id}"]
+- - //a[@class="{class}"]
+- - //input[@id="{id}"]
+- - //select[@id="{id}"]
 
 
 REFERENCE:
